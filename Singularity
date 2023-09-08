@@ -46,3 +46,10 @@ From: broadinstitute/gatk:4.2.0.0
    mkdir -p /bwa-mem2
    cd /opt
    curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.2.1/bwa-mem2-2.2.1_x64-linux.tar.bz2 | tar jxf - 
+   # Install STAR
+   wget https://github.com/alexdobin/STAR/archive/2.7.11a.tar.gz 
+   tar -xzf 2.7.11a.tar.gz
+   cd STAR-2.7.11a/source
+   make STAR
+   cd ../../
+   cp STAR-2.7.11a/source/STAR .
